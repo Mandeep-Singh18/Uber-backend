@@ -1,10 +1,10 @@
 import http from "http"
 import app from "./app.js";
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5001;
 
 const server = http.createServer(app);
 
 server.listen(port, () => {
-    console.log(`Server is up: ${port}`)
+    console.log(`Server is up on port: ${port}`)
 })
