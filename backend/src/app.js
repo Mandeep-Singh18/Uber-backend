@@ -2,7 +2,8 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser"
 
-import userRoutes from "./routes/userRoutes.js"
+import userRoutes from "./routes/user.routes.js"
+import captainRoutes from "./routes/captain.routes.js"
 import { connectDB } from "./config/db.config.js";
 
 const app = express();
@@ -14,6 +15,7 @@ app.use(cors());
 app.use(cookieParser());
 
 app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/captain', captainRoutes);
 
 // app.get('/', (req, res) => {
 //     res.send("Server is Running")
