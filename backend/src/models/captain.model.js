@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { act } from "react";
 
 const captainSchema = new mongoose.Schema({
     fullName: {
