@@ -13,6 +13,7 @@ function App() {
         <Route path="/user-login" element={<UserLogin/>} />
         <Route path="/user-register" element={<UserRegister/>} />
         <Route path="/driver-login" element={<DriverLogin/>} />
+        <Route path="/driver-login" element={<DriverLogin/>} />
         <Route path="/driver-register" element={<DriverRegister/>} />
       </Routes>
     </div>
