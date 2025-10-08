@@ -1,9 +1,10 @@
 import React from 'react'
+import { UserRegisterForm } from '../features/user/components/UserRegisterForm'
 
 const UserRegister = () => {
   return (
-    <div>
-      ur
+    <div className='flex justify-center items-center min-h-screen'>
+      <UserRegisterForm/>
     </div>
   )
 }

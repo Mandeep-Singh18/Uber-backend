@@ -49,9 +49,11 @@ const Register = () => {
                         />
                     </CardContent>
                     <CardFooter>
-                        <Button className='w-full text-md py-6'>
-                            Sign up as Rider <ArrowRight className='ml-2 h-5 w-5' />
-                        </Button>
+                        <Link to={"/user-register"}>
+                            <Button className='w-full text-md py-6'>
+                                Sign up as Rider <ArrowRight className='ml-2 h-5 w-5' />
+                            </Button>
+                        </Link>
                     </CardFooter>
                 </Card>
 
@@ -71,9 +73,11 @@ const Register = () => {
                         />
                     </CardContent>
                     <CardFooter>
-                        <Button className='w-full text-md py-6'>
-                            Sign up as Captain <ArrowRight className='ml-2 h-5 w-5' />
-                        </Button>
+                        <Link to={"/driver-register"}>
+                            <Button className='w-full text-md py-6'>
+                                Sign up as Captain <ArrowRight className='ml-2 h-5 w-5' />
+                            </Button>
+                        </Link>
                     </CardFooter>
                 </Card>
             </div>

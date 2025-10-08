@@ -1,9 +1,10 @@
 import React from 'react'
+import DriverRegisterForm from '../features/captain/components/DriverRegisterForm'
 
 const DriverRegister = () => {
   return (
-    <div>
-      dr
+    <div className='flex justify-center items-center min-h-screen mt-10'>
+      <DriverRegisterForm/>
     </div>
   )
 }

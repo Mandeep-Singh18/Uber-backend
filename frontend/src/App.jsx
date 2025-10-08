@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom"
-import UserLogin from "./pages/UserLogin"
 import UserRegister from "./pages/UserRegister"
+import UserLogin from "./pages/UserLogin"
 import Home from "./pages/Home"
 import DriverLogin from "./pages/DriverLogin"
 import DriverRegister from "./pages/DriverRegister"

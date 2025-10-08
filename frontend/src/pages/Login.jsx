@@ -44,10 +44,14 @@ const Login = () => {
                             className='w-full max-w-xs h-auto rounded-md'
                         />
                     </CardContent>
+
+            
                     <CardFooter>
-                        <Button className='w-full text-md py-6'>
-                            Continue as Rider <ArrowRight className='ml-2 h-5 w-5' />
-                        </Button>
+                        <Link to={"/user-login"}>
+                            <Button className='w-full text-md py-6'>
+                                Continue as Rider <ArrowRight className='ml-2 h-5 w-5' />
+                            </Button>
+                        </Link>
                     </CardFooter>
                 </Card>
 
@@ -66,9 +70,11 @@ const Login = () => {
                         />
                     </CardContent>
                     <CardFooter>
-                        <Button className='w-full text-md py-6'>
-                            Continue as Captain <ArrowRight className='ml-2 h-5 w-5' />
-                        </Button>
+                        <Link to={"/driver-login"}>
+                            <Button className='w-full text-md py-6'>
+                                Continue as Captain <ArrowRight className='ml-2 h-5 w-5' />
+                            </Button>
+                        </Link>
                     </CardFooter>
                 </Card>
             </div>
