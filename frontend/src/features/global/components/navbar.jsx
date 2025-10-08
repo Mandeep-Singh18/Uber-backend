@@ -60,10 +60,10 @@ const Navbar = () => {
             Help
           </Button>
           <Button variant="ghost" className="text-md font-medium">
-            <Link to="/user-login">Log in</Link>
+            <Link to="/login">Log in</Link>
           </Button>
           <Button className="bg-white text-black rounded-full text-md font-medium hover:bg-gray-200">
-            <Link to="/user-register">Sign up</Link>
+            <Link to="/register">Sign up</Link>
           </Button>
         </div>
       </div>

@@ -39,35 +39,27 @@ const Hero = () => {
   };
 
   return (
-    <div className="bg-white flex flex-col lg:flex-row items-center lg:items-start justify-center min-h-[calc(100vh-64px)]">
+    <div className="bg-white flex flex-col lg:flex-row items-center lg:items-start justify-center px-15 min-h-[calc(100vh-64px)]">
       {/* Left Section: Form and Text */}
-      <div className="flex-1 max-w-xl lg:mr-20 mb-12 lg:mb-0">
-        {/* Location Header */}
-        <div className="flex items-center text-gray-700 mb-6">
-          <MapPin className="h-5 w-5 mr-2" />
-          <span className="font-medium">Chandigarh, IN</span>
-          <Button variant="link" className="text-blue-600 ml-2 p-0 h-auto">
-            Change city
-          </Button>
-        </div>
+      <div className="flex-1 p-5 pt-15 max-w-xl h-[500px] lg:mr-20 mb-12 lg:mb-0">
 
         {/* Main Heading */}
-        <h1 className="text-5xl lg:text-6xl font-bold tracking-tight mb-8">
+        <h1 className="text-5xl lg:text-6xl font-medium tracking-tight mb-8">
           Go anywhere with <br />
           Uber
         </h1>
 
         {/* Location Inputs */}
-        <div className="bg-gray-100 p-6 rounded-lg shadow-inner">
+        <div className="">
           {/* Exact Location Pill */}
-          <div className="flex justify-end mb-4">
+          {/* <div className="flex justify-end mb-4">
             <div className="bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-full flex items-center">
               Get exact location
               <X className="h-4 w-4 ml-2 cursor-pointer" />
             </div>
-          </div>
+          </div> */}
 
-          <div className="relative mb-4">
+          <div className="relative mb-4 w-[28em]">
             <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
             <Input
               placeholder="Pickup location"
@@ -76,7 +68,7 @@ const Hero = () => {
             <Send className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500 cursor-pointer" />
           </div>
 
-          <div className="relative mb-6">
+          <div className="relative mb-6 w-[28em]">
             <Car className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
             <Input
               placeholder="Dropoff location"
@@ -85,7 +77,7 @@ const Hero = () => {
           </div>
 
           {/* Date and Time Pickers */}
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 w-[28em]">
             <Popover>
               <PopoverTrigger asChild>
                 <Button
@@ -109,7 +101,7 @@ const Hero = () => {
               </PopoverContent>
             </Popover>
 
-            <Select>
+            {/* <Select>
               <SelectTrigger className="w-full py-5 text-base">
                 <Clock className="mr-2 h-5 w-5" />
                 <SelectValue placeholder="Now" />
@@ -121,12 +113,12 @@ const Hero = () => {
                   </SelectItem>
                 ))}
               </SelectContent>
-            </Select>
+            </Select> */}
           </div>
         </div>
 
         {/* Action Buttons and Link */}
-        <div className="flex items-center mt-6 space-x-4">
+        <div className="flex items-center  mt-6 space-x-4">
           <Button className="bg-black text-white px-6 py-6 text-lg rounded-md hover:bg-gray-800">
             See prices
           </Button>
@@ -138,7 +130,7 @@ const Hero = () => {
 
       {/* Right Section: Image */}
       <div className="flex-1 flex justify-center lg:justify-start">
-        <div className="w-full max-w-[800px] h-[400px] bg-gray-200 rounded-lg overflow-hidden">
+        <div className="w-full max-w-[800px] h-[500px] bg-gray-200 rounded-lg overflow-hidden">
           {/* This is where your image will go */}
           <img
             src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2144/height=2144/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9hM2NmODU2NC1lMmE2LTQxOGMtYjliMC02NWRkMjg1YzEwMGIuanBn" 

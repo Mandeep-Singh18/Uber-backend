@@ -5,6 +5,8 @@ import Home from "./pages/Home"
 import DriverLogin from "./pages/DriverLogin"
 import DriverRegister from "./pages/DriverRegister"
 import Layout from "./features/global/components/layout"
+import Login from "./pages/Login"
+import Register from "./pages/Register"
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout/>}>
           <Route index element={<Home/>} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/register" element={<Register/>} />
           <Route path="/user-login" element={<UserLogin/>} />
           <Route path="/user-register" element={<UserRegister/>} />
           <Route path="/driver-login" element={<DriverLogin/>} />
