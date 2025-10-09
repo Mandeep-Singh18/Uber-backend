@@ -10,8 +10,12 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useContext } from "react";
+import { UserDataContext } from "../../user/context/UserContext";
 
 const Navbar = () => {
+  const { user } = useContext(UserDataContext);
+
   return (
     <nav className="bg-black text-white px-8 py-3">
       <div className="flex justify-between items-center">
@@ -59,12 +63,22 @@ const Navbar = () => {
           <Button variant="ghost" className="text-md font-medium cursor-pointer">
             Help
           </Button>
-          <Button variant="ghost" className="text-md font-medium">
-            <Link to="/login">Log in</Link>
-          </Button>
-          <Button className="bg-white text-black rounded-full text-md font-medium hover:bg-gray-200">
-            <Link to="/register">Sign up</Link>
-          </Button>
+
+          {user ? (
+            <Button variant="ghost" className="text-md bg-yellow font-medium">
+              Welcome {user.fullName.firstName}
+            </Button>
+          ) : (
+            <>
+              <Button variant="ghost" className="text-md font-medium">
+                <Link to="/login">Log in</Link>
+              </Button>
+              <Button className="bg-white text-black rounded-full text-md font-medium hover:bg-gray-200">
+                <Link to="/register">Sign up</Link>
+              </Button>
+            </>
+          )}
+
         </div>
       </div>
     </nav>

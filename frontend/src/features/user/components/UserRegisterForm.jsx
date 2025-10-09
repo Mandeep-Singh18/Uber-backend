@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
@@ -16,6 +16,8 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { UserDataContext } from "../context/UserContext"
+import { useNavigate } from "react-router-dom"
 
 // Define the validation schema using Zod
 const formSchema = z.object({
@@ -33,6 +35,9 @@ const formSchema = z.object({
 
 export function UserRegisterForm() {
   const [isLoading, setLoading] = React.useState(false);
+  const { user, setUser } = useContext(UserDataContext);
+  const navigate = useNavigate();
+
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -50,20 +55,23 @@ export function UserRegisterForm() {
       const formattedUser = {
         fullName: {
           firstName: data.firstName,
-          lastName: data.lastName || ''
+          lastName: data.lastName
         },
         email: data.email,
         password: data.password,
       }
 
       const response = await axios.post('http://localhost:5001/api/v1/users/register', formattedUser);
-      console.log('User registered successfully:', response.data);
-      const data = response.data;
-      localStorage.setItem('token', data.token);
-      toast.success("Registration successful!");
+      const resdata = response.data;
+      setUser(resdata.user);
+      localStorage.setItem('token', resdata.token);
+      toast("Registration successful!");
       form.reset();
+      navigate('/');
+
     } catch (error) {
-      toast.error("Registration failed. Please try again.");
+      console.error("Error during registration:", error)
+      toast("Registration failed. Please try again.");
     }
     finally {
       setLoading(false);

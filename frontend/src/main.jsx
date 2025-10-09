@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter }from 'react-router-dom'
-import UserContext from './features/user/context/userContext'
+import UserContext from './features/user/context/UserContext.jsx'
 import './index.css'
 import App from './App.jsx'
 

@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import { email } from "zod";
+
 
 export const UserDataContext = createContext();
 
@@ -15,7 +15,7 @@ const UserContext = ({ children }) => {
 
   return (
     <>
-        <UserDataContext.Provider value={{ userData, setUserData }}>
+        <UserDataContext.Provider value={{ user: userData, setUser: setUserData }}>
             {children}
         </UserDataContext.Provider>
     </>
