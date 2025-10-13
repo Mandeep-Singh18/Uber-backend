@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser"
 import userRoutes from "./routes/user.routes.js"
 import captainRoutes from "./routes/captain.routes.js"
 import mapsRoutes from "./routes/maps.routes.js"
+import ridesRoutes from "./routes/rides.routes.js"
 import { connectDB } from "./config/db.config.js";
 
 const app = express();
@@ -18,6 +19,7 @@ app.use(cookieParser());
 app.use('/api/v1/users', userRoutes);
 app.use('/api/v1/captain', captainRoutes);
 app.use('/api/v1/maps', mapsRoutes);
+app.use('/api/v1/ride', ridesRoutes);
 
 // app.get('/', (req, res) => {
 //     res.send("Server is Running")
